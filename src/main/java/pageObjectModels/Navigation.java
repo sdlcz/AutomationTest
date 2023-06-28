@@ -14,11 +14,11 @@ public class Navigation {
 		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[2]/a"));
 	}
 	
-	public static WebElement careersAdvice(WebDriver driver) {
+	public static WebElement careersAdviceTab(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[3]/a"));
 	}
 	
-	public static WebElement applyingForUniversity(WebDriver driver) {
+	public static WebElement applyingForUniversityTab(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[4]/a"));
 	}
 
