@@ -43,7 +43,6 @@ public class testCase2 {
 		Assert.assertTrue(Footer.linkedinButton(driver).isDisplayed());
 		Assert.assertTrue(Footer.youtubeButton(driver).isDisplayed());
 		Assert.assertTrue(Footer.podcastsButton(driver).isDisplayed());
-		
 		js.executeScript("arguments[0].scrollIntoView();", Footer.contactUsButton(driver));
 		ScreenShots.TakesScreenshot(driver, "Search graduate Jobs - Social Media Buttons");
 		
@@ -56,14 +55,37 @@ public class testCase2 {
 		Assert.assertTrue(Footer.linkedinButton(driver).isDisplayed());
 		Assert.assertTrue(Footer.youtubeButton(driver).isDisplayed());
 		Assert.assertTrue(Footer.podcastsButton(driver).isDisplayed());
-		
 		js.executeScript("arguments[0].scrollIntoView();", Footer.contactUsButton(driver));
 		ScreenShots.TakesScreenshot(driver, "Search postgraduate courses - Social Media Buttons");
+		
+		Navigation.careersAdviceTab(driver).click();
+		Navigation.gettingAJobButton(driver).click();
+		Assert.assertTrue(Footer.contactUsButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.instagramButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.facebookButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.twitterButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.linkedinButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.youtubeButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.podcastsButton(driver).isDisplayed());
+		js.executeScript("arguments[0].scrollIntoView();", Footer.contactUsButton(driver));
+		ScreenShots.TakesScreenshot(driver, "Getting a job - Social Media Buttons");
+		
+		Navigation.applyingForUniversityTab(driver).click();
+		Navigation.choosingACourseButton(driver).click();
+		Assert.assertTrue(Footer.contactUsButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.instagramButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.facebookButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.twitterButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.linkedinButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.youtubeButton(driver).isDisplayed());
+		Assert.assertTrue(Footer.podcastsButton(driver).isDisplayed());
+		js.executeScript("arguments[0].scrollIntoView();", Footer.contactUsButton(driver));
+		ScreenShots.TakesScreenshot(driver, "Choosing a course - Social Media Buttons");
 		
 	}
 
 	@After
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }
