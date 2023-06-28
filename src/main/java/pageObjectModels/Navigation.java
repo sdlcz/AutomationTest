@@ -38,5 +38,12 @@ public class Navigation {
 		return driver.findElement(By.xpath("//*[@id=\"nav-sm-dropdown-4\"]/div/div/div/div/div[1]/ul/li[1]/a"));
 	}
 	
+	public static WebElement careersCentre (WebDriver driver) {
+		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/a"));
+	}
+	
+	public static WebElement upcomingWebinars (WebDriver driver) {
+		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/div/div/a[1]"));
+	}
 
 }
