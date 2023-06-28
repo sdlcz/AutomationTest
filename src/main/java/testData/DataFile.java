@@ -7,6 +7,7 @@ public class DataFile {
 	public static String registrationPageURL ="https://www.prospects.ac.uk/register";
 	public static String gettingAJobPageURL = "https://www.prospects.ac.uk/careers-advice/getting-a-job";
 	public static String upcomingWebinarsPageURL = "https://www.gradcracker.com/career-centre/webinars/upcoming";
+	public static String toolkitEbook = "https://www.gradcracker.com/career-centre/toolkit";
 	
 	//Registration Page
 	public static String userEmail = "joe.blogs@contoso.com";
