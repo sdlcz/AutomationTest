@@ -42,8 +42,13 @@ public class Navigation {
 		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/a"));
 	}
 	
-	public static WebElement upcomingWebinars (WebDriver driver) {
+	public static WebElement upcomingWebinarsLink (WebDriver driver) {
 		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/div/div/a[1]"));
 	}
+	
+	public static WebElement yourToolkitLink (WebDriver driver) {
+		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/div/div/a[5]"));
+	}
+	
 
 }
