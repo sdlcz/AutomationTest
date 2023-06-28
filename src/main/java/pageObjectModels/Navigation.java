@@ -13,6 +13,14 @@ public class Navigation {
 	public static WebElement postgraduateStudyTab(WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[2]/a"));
 	}
+	
+	public static WebElement careersAdvice(WebDriver driver) {
+		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[3]/a"));
+	}
+	
+	public static WebElement applyingForUniversity(WebDriver driver) {
+		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[1]/ul/li[4]/a"));
+	}
 
 	public static WebElement searchGraduateJobsButton (WebDriver driver) {
 		return driver.findElement(By.xpath("//*[@id=\"nav-sm-dropdown-1\"]/div/div/div/div/div[1]/ul/li[1]/a"));
