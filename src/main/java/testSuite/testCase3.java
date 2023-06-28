@@ -28,16 +28,23 @@ public void preConditions() {
 public void testInterviewTips() {
 	Actions hoverCareers = new Actions(driver);
 	hoverCareers.moveToElement(Navigation.careersCentre(driver)).perform();
-	Navigation.upcomingWebinars(driver).isDisplayed();
+	Navigation.upcomingWebinarsLink(driver).isDisplayed();
 	
-	Navigation.upcomingWebinars(driver).click();
+	Navigation.upcomingWebinarsLink(driver).click();
+	Assert.assertEquals(DataFile.upcomingWebinarsPageURL, driver.getCurrentUrl());
+	
+	hoverCareers.moveToElement(Navigation.careersCentre(driver)).perform();
+	Navigation.yourToolkitLink(driver).click();
+	Assert.assertEquals(DataFile.toolkitEbook, driver.getCurrentUrl());
+	
+	driver.navigate().back();
 	Assert.assertEquals(DataFile.upcomingWebinarsPageURL, driver.getCurrentUrl());
 	
 }
 
 @After
 public void teardown() {
-	//driver.quit
+	driver.quit();
 }
 
 }
