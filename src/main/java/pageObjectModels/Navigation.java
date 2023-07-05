@@ -50,5 +50,8 @@ public class Navigation {
 		return driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div[6]/div/div/a[5]"));
 	}
 	
+	public static WebElement loginLink (WebDriver driver) {
+		return driver.findElement(By.xpath("//*[@id=\"row-nav-primary\"]/div[2]/ul/li[1]/a"));
+	}
 
 }
