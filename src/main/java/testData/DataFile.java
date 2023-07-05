@@ -16,7 +16,7 @@ public class DataFile {
 	public static String userLastName = "Blogs";
 	public static String registrationPageHeading = "Registration: Step 1 of 2";
 	public static String chooseResponse = "Yes";
-	
+	public static String userPassword = "*****";
 	
 
 }
