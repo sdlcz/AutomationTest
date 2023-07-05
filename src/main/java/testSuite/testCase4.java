@@ -13,7 +13,9 @@ import org.openqa.selenium.WebElement;
 
 import driverUtilities.DriverUtilities;
 import pageObjectModels.Navigation;
+import pageObjectModels.LoginPage;
 import testData.DataFile;
+import usefullMethods.ScreenShots;
 
 public class testCase4 {
 WebDriver driver;
@@ -28,13 +30,23 @@ public void preConditions() {
 }
 
 @Test
-public  void functionalityToTest() {
-	JavascriptExecutor js = (JavascriptExecutor) driver;
+public  void functionalityToTest() throws Exception {
 	
 	Navigation.loginLink(driver).click();
 	Assert.assertEquals(DataFile.loginPageURL, driver.getCurrentUrl());
+	ScreenShots.TakesScreenshot(driver, "Login Page");
 	
+	LoginPage.emailField(driver).sendKeys(DataFile.userEmail);
+	Assert.assertEquals(DataFile.userEmail, LoginPage.emailField(driver).getAttribute("value"));
 	
+	LoginPage.passwordField(driver).sendKeys(DataFile.userPassword);
+	Assert.assertEquals(DataFile.userPassword, LoginPage.passwordField(driver).getAttribute("value"));
+	
+	LoginPage.keepMeLoggedCheckBox(driver).click();
+	Assert.assertTrue(LoginPage.keepMeLoggedCheckBox(driver).isSelected());
+	
+	LoginPage.logInButton(driver).click();
+	Assert.assertTrue(LoginPage.errorSummary(driver).isDisplayed());
 	
 	
 	
@@ -43,7 +55,7 @@ public  void functionalityToTest() {
 
 @After
 public void tearDown() {
-	driver.quit();
+	//driver.quit();
 }
 
 }
