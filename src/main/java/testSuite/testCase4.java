@@ -55,7 +55,7 @@ public  void functionalityToTest() throws Exception {
 
 @After
 public void tearDown() {
-	//driver.quit();
+	driver.quit();
 }
 
 }
