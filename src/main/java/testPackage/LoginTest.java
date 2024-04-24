@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -37,12 +38,15 @@ public class LoginTest {
 
 	@And("clicks on login button")
 	public void clicks_on_login_button() {
+		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
 
 	}
 
 	@Then("user is navigated to home page")
 	public void user_is_navigated_to_home_page() {
-
+		public static String inventoryPage = "https://www.saucedemo.com/inventory.html";
+		Assert.assertEquals(inventoryPage, driver.getCurrentUrl());
+		
 	}
 
 
