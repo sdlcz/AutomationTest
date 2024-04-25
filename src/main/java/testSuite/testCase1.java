@@ -43,7 +43,7 @@ WebDriver driver;
 		//HomePage.searchButton(driver).click();
 		//HomePage.careersAdviceLink(driver).click();
 		//HomePage.getingAJobLink(driver).click();
-		WebDriverWait wait = new WebDriverWait(driver,30);
+//		WebDriverWait wait = new WebDriverWait(driver,30);
 		//wait.equals(driver.getCurrentUrl());
 		//Assert.assertEquals(DataFile.gettingAJobPageURL, driver.getCurrentUrl());
 		
@@ -68,7 +68,7 @@ WebDriver driver;
 		currentlyEducationField.selectByVisibleText(DataFile.chooseResponse);
 		//Screenshot.takeScreenshot(driver, "DepartmentShot");
 		
-		wait.until(ExpectedConditions.visibilityOfAllElements(RegistrationPage.nextStepButton(driver)));
+//		wait.until(ExpectedConditions.visibilityOfAllElements(RegistrationPage.nextStepButton(driver)));
 		RegistrationPage.nextStepButton(driver).submit();
 		Assert.assertTrue(RegistrationPage.errorSummary(driver).isDisplayed());
 		Assert.assertTrue(RegistrationPage.passwordError(driver).isDisplayed());
