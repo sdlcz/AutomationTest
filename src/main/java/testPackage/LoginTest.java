@@ -24,6 +24,7 @@ public class LoginTest {
 		DriverUtilities myDriverUtilities = new DriverUtilities();
 		driver = myDriverUtilities.getDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
 
 	}
 
@@ -32,13 +33,13 @@ public class LoginTest {
 		driver.get("https://www.saucedemo.com/");
 	}
 
-	@When("user enters username and password")
-	public void user_enters_username_and_password() {
+	@When("user enters (.*) and (.*)")
+	public void user_enters_username_and_password(String username, String password) {
 		driver.get("https://www.saucedemo.com/");
-//		driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys("standard_user");
-//		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
-		driver.findElement(By.xpath("//*[@id='user-name']"));
-		driver.findElement(By.xpath("//*[@id=\"password\"]"));
+		driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys("standard_user");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+//		driver.findElement(By.xpath("//*[@id='user-name']"));
+//		driver.findElement(By.xpath("//*[@id=\"password\"]"));
 	}
 
 	@And("clicks on login button")
