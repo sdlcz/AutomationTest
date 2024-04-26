@@ -36,10 +36,10 @@ public class LoginTest {
 	@When("user enters (.*) and (.*)")
 	public void user_enters_username_and_password(String username, String password) {
 		driver.get("https://www.saucedemo.com/");
-		driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys("standard_user");
-		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
-//		driver.findElement(By.xpath("//*[@id='user-name']"));
-//		driver.findElement(By.xpath("//*[@id=\"password\"]"));
+//		driver.findElement(By.xpath("//*[@id='user-name']")).sendKeys("standard_user");
+//		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+		driver.findElement(By.xpath("//*[@id='user-name']"));
+		driver.findElement(By.xpath("//*[@id=\"password\"]"));
 	}
 
 	@And("clicks on login button")
