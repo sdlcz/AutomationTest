@@ -84,6 +84,11 @@ public void an_error_message_is_displayed() {
 //	ScreenShots.TakesScreenshot(driver, "Submit Error");
 }
 
+@After
+public void tearDown() {
+	driver.quit();
+}
+
 //	
 //	@Before
 //	public void preConditions() {
