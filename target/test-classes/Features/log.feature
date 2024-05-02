@@ -8,6 +8,10 @@ Feature: Check saucedemo functionality
     Then user is navigated to home page
 
 
+
+
+
+
   #Scenario Outline: Verify saucedemo is working
     #Given browser is open
     #And user is on swag labs login page
