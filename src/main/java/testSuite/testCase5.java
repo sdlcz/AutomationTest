@@ -47,11 +47,23 @@ public class testCase5 {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
 		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).isDisplayed());
+	
+		driver.navigate().refresh();
+		
+		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_user");
+		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]")).isDisplayed());
+		
+		driver.navigate().refresh();
+		
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]")).isDisplayed());
 	}
 	
 	@After
 	public void tearDown() {
-		driver.quit();
+		
 		
 	}
 	
