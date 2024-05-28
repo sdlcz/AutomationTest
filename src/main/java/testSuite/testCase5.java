@@ -59,11 +59,16 @@ public class testCase5 {
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
 		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]")).isDisplayed());
+		
+		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_useroqwerjnqwei123910429jfsdnfj!!2£asdfksjdfnwe2349][d");
+		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("roqwerjnqwei123910429jfsdnfj!!2£asdfksjdfnwe2349][d");
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).isDisplayed());
+		
 	}
 	
 	@After
 	public void tearDown() {
-		
+		driver.quit();
 		
 	}
 	
